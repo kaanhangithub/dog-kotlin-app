@@ -18,7 +18,9 @@ package com.example.dogglers.adapter
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dogglers.data.DataSource
 
 /**
  * Adapter to inflate the appropriate list item layout and populate the view with information
@@ -36,6 +38,7 @@ class DogCardAdapter(
      */
     class DogCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
         // TODO: Declare and initialize all of the list item UI components
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DogCardViewHolder {
@@ -50,7 +53,7 @@ class DogCardAdapter(
         return DogCardViewHolder(null)
     }
 
-    override fun getItemCount(): Int = 0 // TODO: return the size of the data set instead of 0
+    override fun getItemCount(): Int = DataSource.dogs.size // TODO: return the size of the data set instead of 0
 
     override fun onBindViewHolder(holder: DogCardViewHolder, position: Int) {
         // TODO: Get the data at the current position
